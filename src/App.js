@@ -77,8 +77,10 @@ function App() {
 
   return (
     <div className="App">
+      <h1>Welcome to real-time sign language detection application!</h1>
       <header className="App-header">
         <Webcam
+          className="webcam"
           ref={webcamRef}
           muted={true} 
           style={{
@@ -89,12 +91,11 @@ function App() {
             right: 0,
             textAlign: "center",
             zindex: 9,
-            width: 640,
-            height: 480,
           }}
         />
 
         <canvas
+          className="canvas"
           ref={canvasRef}
           style={{
             position: "absolute",
@@ -104,8 +105,6 @@ function App() {
             right: 0,
             textAlign: "center",
             zindex: 8,
-            width: 640,
-            height: 480,
           }}
         />
       </header>
